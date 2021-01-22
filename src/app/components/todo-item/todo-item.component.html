@@ -1,0 +1,20 @@
+<! -- 
+this html is added to the app.component.html file as page renders
+the same thing is done for all components.
+
+ngClass lets us set a function which runs on the tag which it
+is attached to.
+
+a event is added to a tag via () for instance in the input tag:
+<input (change)="onToggle(todo)" ... /
+the even is the (change) and so when the input changes the
+function onToggle is run with a parameter of todo passed to it.
+same thing for the button click event, (click).
+--> 
+<div [ngClass]="setClasses()">
+    <p>
+        <input (change)="onToggle(todo)" type="checkbox" />
+        {{ todo.title }}
+        <button (click)="onDelete(todo)" class="del">x</button>
+    </p>
+</div>

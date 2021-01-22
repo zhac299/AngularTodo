@@ -1,0 +1,15 @@
+<! -- the (deleteTodo) is the method which is run when 
+      the deleteTodo button is pressed i.e. the click ($event)
+
+      the (addTodo) is a method which is run when the EventEmitter
+      from add-todo-components passes the event up to
+      this component. 
+-->
+<div>
+    <app-add-todo (addTodo)="addTodo($event)">
+    </app-add-todo>
+    <app-todo-item *ngFor = "let todo of todos" 
+    [todo] = 'todo'
+    (deleteItem)="deleteItem($event)">
+    </app-todo-item>
+</div>
